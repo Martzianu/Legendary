@@ -22,13 +22,13 @@ class CustomCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        textLabel.font = .systemFont(ofSize: 14)
+        textLabel.font = .systemFont(ofSize: 10)
         textLabel.textColor = .white
-        textLabel.frame.origin = CGPoint(x: 10, y: 5)
+        textLabel.frame.origin = CGPoint(x: 13, y: 0)
         self.contentView.addSubview(textLabel)
 
-        circle.frame = CGRect(x: 0, y: 10, width: 6, height: 6)
-        circle.layer.cornerRadius = 3
+        circle.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
+        circle.layer.cornerRadius = 5
         self.contentView.addSubview(circle)
     }
 
@@ -38,6 +38,7 @@ class CustomCell: UICollectionViewCell {
 
         textLabel.sizeToFit()
         contentView.backgroundColor = .gray
+
     }
 
 
