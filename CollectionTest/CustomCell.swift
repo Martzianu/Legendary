@@ -37,7 +37,6 @@ class CustomCell: UICollectionViewCell {
         circle.backgroundColor = color
 
         textLabel.sizeToFit()
-        contentView.backgroundColor = .gray
 
     }
 

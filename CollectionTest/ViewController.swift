@@ -17,13 +17,12 @@ struct Legend {
 class ViewController: UIViewController {
 
     let dataSource: [Legend] = [Legend(title: "Body Battery", circleColor: .blue),
-                              Legend(title: "Estimated", circleColor: .red)]
-//                                Legend(title: "Rest", circleColor: .red),
-//                                Legend(title: "Stress", circleColor: .red),
-//                                Legend(title: "Active", circleColor: .red),
-//                                Legend(title: "Unmeasurable", circleColor: .red)]
-    let itemsOnFirstRow: Int = 2
-    var itemsOnSecondRow: CGFloat = 0
+                              Legend(title: "Estimated", circleColor: .red),
+                                Legend(title: "Rest", circleColor: .red),
+                                Legend(title: "Stress", circleColor: .red),
+                                Legend(title: "Active", circleColor: .red),
+                                Legend(title: "Unmeasurable", circleColor: .red)]
+    let itemsOnFirstRow: Int? = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,22 +60,3 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return 5.0
     }
 }
-
-//extension ViewController: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let division = CGFloat(indexPath.row) < itemsOnFirstRow ? itemsOnFirstRow : itemsOnSecondRow
-//        let item = dataSource[indexPath.row]
-//        let textSize: CGFloat = item.title.size(withAttributes:[.font: UIFont.systemFont(ofSize: 10.0)]).width
-//        let bulletSize: CGFloat = 10
-//        let cellContentSize = textSize + bulletSize + 8
-//        var maxCellSize = (collectionView.frame.size.width - cellContentSize) / division
-//
-//        if maxCellSize < cellContentSize {
-//            maxCellSize = cellContentSize
-//        }
-//        return CGSize(width: maxCellSize, height: 10)
-//    }
-//
-//}
-
